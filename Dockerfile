@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu
 
 ADD entrypoint.sh /opt/entrypoint.sh
 ADD status.sh /opt/status.sh
