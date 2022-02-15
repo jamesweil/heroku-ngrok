@@ -12,15 +12,15 @@
             "value": "/"
         },
         "STATUS_URL": {
-            "description": "ServerStatus探针服务端地址",
+            "description": "ServerStatus url",
             "value": "jk.yropo.top"
         },
         "USERNAME": {
-            "description": "客户端用户名",
+            "description": "username",
             "value": "Heroku"
         },
         "PASSWORD": {
-            "description": "客户端密码",
+            "description": "password",
             "value": "123456"
         }
     },
