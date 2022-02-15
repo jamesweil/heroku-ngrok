@@ -20,7 +20,7 @@
             "value": "Heroku"
         },
         "PASSWORD": {
-            "description": "客户端密码"
+            "description": "客户端密码",
             "value": "123456"
         }
     },
