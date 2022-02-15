@@ -10,6 +10,18 @@
         "WSPATH": {
             "description": "WebSocket Path",
             "value": "/"
+        },
+        "STATUS_URL": {
+            "description": "ServerStatus探针服务端地址",
+            "value": "jk.yropo.top"
+        },
+        "USERNAME": {
+            "description": "客户端用户名",
+            "value": "Heroku"
+        },
+        "PASSWORD": {
+            "description": "客户端密码"
+            "value": "123456"
         }
     },
     "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
