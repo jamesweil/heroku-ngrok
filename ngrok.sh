@@ -44,7 +44,9 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "=========================================="
   echo "To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
   echo "=========================================="
+  $RESULT="To connect: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
 else
   echo "$HAS_ERRORS"
+  $RESULT="$HAS_ERRORS"
   exit 4
 fi
