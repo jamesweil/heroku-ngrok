@@ -1,10 +1,7 @@
-FROM alpine:latest
-
-ADD entrypoint.sh /opt/entrypoint.sh
-ADD status.sh /opt/status.sh
-ADD start.sh /opt/start.sh
-
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
- && chmod +x /opt/entrypoint.sh /opt/status.sh /opt/start.sh
-ENTRYPOINT ["sh", "-c", "/opt/start.sh"]
-# CMD echo -e "1\n\n${STATUS_URL}\n\n${USERNAME}\n${PASSWORD}\n\n" | bash /opt/status.sh c
+FROM ubuntu
+ENV DEBIAN_FRONTEND=noninteractive
+ADD ngrok.sh /opt/ngrok.sh
+RUN apt update && apt install -y \
+    ssh wget unzip vim 
+EXPOSE 80 443 3306 5432 8888
+CMD  /opt/ngrok.sh
