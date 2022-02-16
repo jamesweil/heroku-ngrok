@@ -6,7 +6,7 @@ RUN wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O
     && cd / && unzip ngrok-stable-linux-amd64.zip \
     && chmod +x ngrok
 RUN mkdir /run/sshd \
-    && echo "/ngrok tcp --authtoken &{NGROK_TOKEN} --region jp 22 &" >>/openssh.sh \
+    && echo "/ngrok tcp --authtoken 1yAXHnIKLa3o42S5Z5tsTGYqdDb_3iS3Tx3KoTSneyR9qhsgS --region jp 22 &" >>/openssh.sh \
     && echo '/usr/sbin/sshd -D' >>/openssh.sh \
     && echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config  \
     && echo root:akashi520|chpasswd \
