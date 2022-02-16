@@ -3,9 +3,9 @@
     "description": "Deploy V2ray on Heroku.",
     "keywords": ["V2Ray"],
     "env": {
-        "RESULT": {
-            "description": "RESULT",
-            "value": "/"
+        "NGROK_TOKEN": {
+            "description": "ngrok token",
+            "value": ""
         }
     },
     "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
