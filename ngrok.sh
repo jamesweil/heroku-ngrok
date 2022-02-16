@@ -4,6 +4,12 @@ NGROK_TOKEN="1yAXHnIKLa3o42S5Z5tsTGYqdDb_3iS3Tx3KoTSneyR9qhsgS"
 USER_PASS="123456"
 USER="root"
 
+mkdir /run/sshd
+/usr/sbin/sshd -D
+sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
+sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
+sudo service sshd restart
+
 if [[ -z "$NGROK_TOKEN" ]]; then
   echo "Please set 'NGROK_TOKEN'"
   exit 2
