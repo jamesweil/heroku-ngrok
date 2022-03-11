@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: v2ray-okteto
+  name: v2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: v2ray-okteto
+      app: v2
   template:
     metadata:
       labels:
-        app: v2ray-okteto
+        app: v2
     spec:
       containers:
       - image: okteto.dev/v2ray-okteto:latest
-        name: v2ray-okteto
+        name: v2
         ports:
         - containerPort: 8080
